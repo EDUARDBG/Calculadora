@@ -26,3 +26,14 @@
     font-size: 20px;
     letter-spacing: 5px;
 }
+#txtResultado{
+    height: 80px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    font-size: 40px;
+    display: flex;
+    justify-content: end;
+    aling-items: center;
+    padding: 0 10px;
+    background-color: #fff;
+}
