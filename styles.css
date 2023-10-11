@@ -1,0 +1,19 @@
+.Container{
+    width: fit-content;
+    margin: 50px auto;
+    border: 1px solid #000;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: aquamarine;
+  
+}
+.tecla{
+    width: 80px;
+    height: 80px;
+    margin: 3px;
+    border-radius: 20px;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
