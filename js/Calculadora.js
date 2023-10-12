@@ -4,7 +4,7 @@ let parcial= "";
 //elemento donde se coloca la opercion que estas haciendo
 let operRealizada = document.getElementById("operacionRealizada")
 //elemento donde se coloca el resultado
-let txtResult = document.getElementById("txtResultado");
+let txtResultado = document.getElementById("txtResultado");
 
 //operador selccionado
 let operadorSelccionado = "";
@@ -23,7 +23,7 @@ function operador(num){
     //control a la division por 0
     if(numero=="0" && operadorSelccionado=="/"){
         limpiar();
-        txtResult.innerHTML = "Indefinido";
+        txtResultado.innerHTML = "Indefinido";
         return;
     }
     //guardo el tipo de tecla presionada por ultima vez
@@ -40,13 +40,14 @@ function operacion(oper){
     ultimoDigitoPresionado = "operacion";
     //aramando la formula matematica
     parcial = parcial + oper;
-    numero = "";
+    numero = 0;
     operRealizada.innerHTML = parcial;   
 }
 
 function calculo(){
+    //con eval evaluo la formula matematica
     parcial = eval(parcial);
-    txtResult.innerHTML = parcial;
+    txtResultado.innerHTML = parcial;
     parcial = parcial.toString();
     numero = "";
     operRealizada.innerHTML = parcial;  
@@ -55,7 +56,7 @@ function calculo(){
 function limpiar(){
     operadorSelccionado = "";
     parcial = "";
-    txtResult.innerHTML = "";
+    txtResultado.innerHTML = "";
     numero = "";
     operRealizada.innerHTML = 0;    
 }
